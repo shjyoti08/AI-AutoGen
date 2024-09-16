@@ -1,0 +1,123 @@
+
+  
+  .solve-question-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px); /* Adjust based on header/footer height */
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding is included in height calculation */
+  }
+  
+  .solve-question-container {
+    background-color: #fff;
+    border: 2px solid #6f42c1; /* Purple border */
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1000px; /* Adjust as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-height: calc(200vh - 120px); /* Adjust based on header/footer height */
+    overflow-y: auto; /* Allows scrolling within the container */
+  }
+  
+  .question-text-container {
+    margin-bottom: 20px;
+  }
+  
+  .solve-question-title {
+    color: #6f42c1; /* Purple */
+    margin-bottom: 10px;
+  }
+  
+  .question-text {
+    color: #333;
+  }
+  
+  .uploaded-images {
+    margin: 20px 0;
+  }
+  
+  .image-preview-container {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .image-preview {
+    max-width: 100%;
+    width: 150px; /* Set width */
+    height: 100px; /* Set height */
+    object-fit: cover; /* Maintain aspect ratio and cover the specified dimensions */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+
+  
+  .btn-submit, .btn-back, .btn-question-list, .btn-solve, .btn-explain, .btn-correct {
+    background-color: #6f42c1 !important; /* Purple */
+    border-color: #6f42c1 !important; /* Purple */
+  }
+  
+  .btn-cancel {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    background-color: #6f42c1 !important;  /* Light gray for cancel button */
+    border-color: #6f42c1 !important; /* Light gray border */
+  }
+  
+  .btn-back {
+    margin-right: 10px;
+  }
+  
+  .solve-question-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  @media (max-width: 767px) {
+    .solve-question-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .btn-back, .btn-question-list, .btn-solve, .btn-explain {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
+  
+  .disabled-color {
+    background-color: #d3d3d3 !important; /* Light gray color for disabled appearance */
+    color: #888 !important; /* Gray text */
+    border-color: #d3d3d3 !important; /* Match border color to background */
+    cursor: not-allowed; /* Indicate it's disabled */
+    padding: 10px;
+  }
+
+  .solve-correct-container {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+  }
+  
+  .solve-correct-container .btn-solve,
+  .solve-correct-container .btn-correct {
+    width: 50%; /* Each button takes up 50% of the container */
+    padding: 10px; /* Adjust padding to ensure consistent button size */
+    text-align: center; /* Center the text */
+    font-size: 16px; /* Adjust font size for readability */
+  }
+  
+  @media (max-width: 767px) {
+  
+    .solve-correct-container {
+      flex-direction: row; /* Ensure buttons stay side by side on mobile */
+      justify-content: space-between; /* Distribute space evenly between buttons */
+      width :100%;
+    }
+    
+}

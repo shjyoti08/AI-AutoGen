@@ -1,0 +1,115 @@
+/* General Styles for Body and HTML */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure full height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar Styles */
+.custom-navbar {
+  background-color: #6f42c1 !important; /* Purple background for the navbar */
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top of other content */
+  height: 56px; /* Adjust this to match your actual navbar height */
+}
+
+/* Navbar Brand */
+.custom-navbar .navbar-brand {
+  color: white !important;
+}
+
+/* Navbar Links */
+.custom-navbar .nav-link {
+  color: white !important;
+  padding: 0.5rem 1rem; /* Adjust padding to remove button-like look */
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+/* Active Navbar Link */
+.custom-navbar .nav-link.active {
+  color: #e9d8fd !important; /* Light purple for active link */
+}
+
+/* Navbar Link Hover */
+.custom-navbar .nav-link:hover {
+  color: #4b0082 !important; /* Dark purple on hover */
+}
+
+/* Navbar Logout Icon */
+.custom-navbar .logout-icon {
+  color: white !important; /* Ensure logout icon is white */
+}
+
+/* Mobile Sidebar Styles */
+@media (max-width: 761px) { /* Adjust as necessary for your breakpoint */
+  .custom-navbar .offcanvas-body {
+    background-color: #6f42c1 !important; /* Purple background for sidebar */
+  }
+  
+  .custom-navbar .offcanvas-body .nav-link {
+    color: white !important; /* White color for sidebar links */
+  }
+  
+  .custom-navbar .offcanvas-body .logout-icon {
+    color: white !important; /* Ensure logout icon is white in sidebar */
+  }
+  .username-text {
+    color: rgb(47, 47, 47) !important;
+  }
+}
+
+/* Main content area */
+.flex-fill {
+  flex: 1; /* Allow the main content to grow and fill the available space */
+  width: 100%;
+  margin-top:-55px;
+  overflow-y: auto; /* Make content scrollable */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  padding-bottom:20px;
+  height:100%;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #6f42c1;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top of other content */
+  height: 60px; /* Adjust this to match your actual footer height */
+}
+
+/* Username text */
+.username-text {
+  color: white;
+  font-weight: bold;
+}
+
+/* Button styles */
+.custom-button {
+  color: white;
+  border-color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-button:hover {
+  background-color: white;
+  color: #6f42c1;
+}
+
+.custom-button.active {
+  background-color: #6f42c1;
+  color: white;
+  border-color: #6f42c1;
+}

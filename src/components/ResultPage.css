@@ -1,0 +1,89 @@
+.result-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    width: 100%; /* Full width */
+    max-width: 1000px; /* Limit max width */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .result-content {
+    background-color: #fff;
+    padding: 30px;
+    border: 2px solid #6f42c1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; 
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in width calculations */
+  }
+  
+  .result-title {
+    color: #6f42c1;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .result-question, .result-explanation,.result-accordion .accordion-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #6f42c1;
+    border-radius: 5px;
+    background-color: #f5f0ff;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in width calculations */
+  }
+  
+  .result-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 10px 0; /* Add padding to prevent overlap with container */
+    width: 100%;
+  }
+  
+  .result-buttons .btn-primary,
+  .result-buttons .btn-secondary {
+    flex: 1;
+    max-width: 48%; /* Ensures some spacing inside the container */
+  }
+  
+  .result-buttons .btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+    color: white;
+    margin-right: 10px; /* Add space to the right */
+  }
+  
+  .result-buttons .btn-primary:hover {
+    background-color: #5a359c;
+    border-color: #5a359c;
+  }
+  
+  .result-buttons .btn-secondary {
+    background-color: white;
+    border-color: #6f42c1;
+    color: #6f42c1;
+    margin-left: 10px; /* Add space to the left */
+  }
+  
+  .result-buttons .btn-secondary:hover {
+    background-color: #f5f0ff;
+    border-color: #5a359c;
+    color: #5a359c;
+  }
+  .result-accordion .accordion-header {
+    background-color: #f5f0ff;  /* Matching header color */
+   
+  }
+  
+  .result-accordion .accordion-body {
+    background-color: #f5f0ff; /* Matching body color */
+    border-top: 1px solid #6f42c1;
+  }
+  
+  .accordion-item {
+    margin-bottom: 10px;
+  }
+  

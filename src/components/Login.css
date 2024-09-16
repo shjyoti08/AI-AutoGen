@@ -1,0 +1,61 @@
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    /* background-image: url('../assets/bgimage.webp');  */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-color: #6f42c1 !important;
+    */
+  }
+  
+  .login-form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border: 1px solid  #6f42c1;
+  }
+  
+  .login-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .login-form {
+    margin-bottom: 15px;
+  }
+  
+  .login-button {
+    width: 100%;
+  
+  }
+
+  .password-wrapper {
+    position: relative;
+  }
+  
+  .password-toggle-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6f42c1 !important;
+  }
+
+  .custom-btn-primary {
+    background-color: #6f42c1 !important;  /* Purple color */
+    border-color: #6f42c1 !important;
+    color: white !important; /* Ensure text color is white */
+  
+  }
+  .custom-btn-link {
+    color: #6f42c1 !important; /* Purple text for the link button */
+  }

@@ -1,0 +1,34 @@
+/* src/Analytics.css */
+
+.analytics-container {
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa; /* Background color to match your theme */
+    padding: 20px; /* Add padding to ensure spacing on mobile */
+  }
+  
+  .analytics-content {
+    border: 2px solid #6f42c1; /* Border color to match your theme */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white; /* Background color to match other components */
+    color: #6f42c1; /* Text color to match theme */
+    width: 100%; /* Full width on smaller screens */
+    max-width: 1000px; /* Increase max width for larger screens */
+    box-sizing: border-box; /* Ensures padding does not affect total width */
+  }
+  
+  .chart-wrapper {
+    position: relative;
+    width: 100%; /* Use full width of the container */
+    height: 500px; /* Increase height for better visibility */
+  }
+  
+  @media (max-width: 576px) { /* Styles for extra small screens */
+    .chart-wrapper {
+      height: 400px; /* Adjust height for smaller devices */
+    }
+  }
+  
