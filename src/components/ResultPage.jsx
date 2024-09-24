@@ -12,7 +12,7 @@ const ResultPage = () => {
   // Accessing the response data from navigation state
   const { state } = location;
   const { message, ai_data, actionType, questionList,class_id, subject_id, topic_ids, subtopic } = state || {};
-  const { question, ai_explaination, student_answer, question_marks, obtained_marks,concepts } = ai_data || {};
+  const { question, ai_explaination, student_answer, question_marks, obtained_marks,concepts,comment,concepts_used } = ai_data || {};
 
   // console.log('question-list:',questionList)
 
@@ -20,10 +20,10 @@ const ResultPage = () => {
     navigate('/student-dash'); // Replace with your actual dashboard route
   };
   useEffect(() => {
-    console.log("Class ID:", class_id);
-    console.log("Subject ID:", subject_id);
-    console.log("Topic IDs:", topic_ids);
-    console.log("Subtopic:", subtopic);
+    // console.log("Class ID:", class_id);
+    // console.log("Subject ID:", subject_id);
+    // console.log("Topic IDs:", topic_ids);
+    // console.log("Subtopic:", subtopic);
   }, [class_id, subject_id, topic_ids, subtopic]);
 
   const handleShowQuestionList = () => {
@@ -58,7 +58,14 @@ const ResultPage = () => {
         return (
              <>
              <div className="result-explanation">
-             <p><strong>AI Solution:</strong> {ai_explaination}</p>
+             {/* <p><strong>AI Solution:</strong> {ai_explaination}</p> */}
+             <p><strong>AI Solution:</strong></p>
+            {/* Render AI Explanation as steps */}
+            <ol>
+              {ai_explaination && ai_explaination.map((step, index) => (
+                <ol key={index}>{step}</ol>
+              ))}
+            </ol>
               </div>
              <div className="result-explanation">
               <p><strong>Score:</strong> {obtained_marks}/{question_marks}</p>
@@ -72,7 +79,20 @@ const ResultPage = () => {
             <p><strong>Student Answer:</strong> {student_answer}</p>
            </div>
             <div className="result-explanation">
-            <p><strong>AI Solution:</strong> {ai_explaination}</p>
+            {/* <p><strong>AI Solution:</strong> {ai_explaination}</p> */}
+            <p><strong>AI Solution:</strong></p>
+            {/* Render AI Explanation as steps */}
+            <ol>
+              {ai_explaination && ai_explaination.map((step, index) => (
+                <li key={index}>{step}</li>
+              ))}
+            </ol>
+             </div>
+             <div className="result-explanation">
+            <p><strong>Comments:</strong> {comment}</p>
+             </div>
+             <div className="result-explanation">
+            <p><strong>Concept_used:</strong> {concepts_used}</p>
              </div>
             <div className="result-explanation">
              <p><strong>Score:</strong> {obtained_marks}/{question_marks}</p>
